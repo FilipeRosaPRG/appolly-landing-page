@@ -1,16 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Appolly - Landing Page</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
-<body>
-    <header></header>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <img
+      src="assets/images/background-image.png"
+      alt=""
+      class="header-background-imagem"
+    />
+    <header class="header">
+      <div class="header-container container">
+        <div class="header-contacts">
+          <ul>
+            <li>
+              <img
+                width="18"
+                height="18"
+                src="assets/images/mail-fill.svg"
+                alt="Logo de email"
+              />
+              <a href="mailto:teste">Info@youremail.com</a>
+            </li>
+            <li>
+              <img
+                width="18"
+                height="18"
+                src="assets/images/phone-fill.svg"
+                alt="Logo de telefone"
+              />
+              <a href="tel:480555-010">(480) 555-0103</a>
+            </li>
+          </ul>
+          <ul class="social-media-list">
+            <li>
+              <a href="mailto:teste">
+                <img
+                  width="18"
+                  height="18"
+                  src="assets/images/facebook-fill.svg"
+                  alt="Logo do facebook"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="mailto:teste">
+                <img
+                  width="18"
+                  height="18"
+                  src="assets/images/instagram-fill.svg"
+                  alt="Logo do instagram"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="mailto:teste">
+                <img
+                  width="18"
+                  height="18"
+                  src="assets/images/twitter-fill.svg"
+                  alt="Logo do twitter"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="mailto:teste">
+                <img
+                  width="18"
+                  height="18"
+                  src="assets/images/youtube-fill.svg"
+                  alt="Logo do youtube"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Mobile header -->
+        <div class="header-mobile">
+          <button
+            class="menu-toggle"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="navigation"
+          >
+            <img
+              src="assets/images/menu-line.svg"
+              width="24"
+              height="24"
+              alt="Icone de menu"
+            />
+          </button>
+          <div class="logo-wrapper">
+            <div class="logo-container">
+              <img
+                class="logo-image"
+                src="assets/images/Logo4.png"
+                alt="Appolly logo"
+                width="167"
+                height="28"
+              />
+            </div>
+          </div>
+          <button class="primary-button">DOWNLOAD</button>
+        </div>
+
+        <!-- Main navigation -->
+        <nav id="navigation" class="header-nav">
+          <ul class="header-menu" role="menubar">
+            <li role="none">
+              <a class="primary-link" href="#home" role="menuitem">HOME</a>
+            </li>
+            <li role="none">
+              <a class="primary-link" href="#about" role="menuitem">ABOUT</a>
+            </li>
+            <li role="none">
+              <a class="primary-link" href="#features" role="menuitem"
+                >FEATURES</a
+              >
+            </li>
+            <li role="none" class="logo-wrapper">
+              <div class="logo-container">
+                <img
+                  class="logo-image"
+                  src="assets/images/Logo4.png"
+                  alt="Appolly logo"
+                  width="167"
+                  height="28"
+                />
+              </div>
+            </li>
+            <li role="none">
+              <a class="primary-link" href="#screenshots" role="menuitem"
+                >SCREENSHOTS</a
+              >
+            </li>
+            <li role="none">
+              <a class="primary-link" href="#blog" role="menuitem">BLOG</a>
+            </li>
+            <li role="none">
+              <button class="primary-button" type="button">DOWNLOAD</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <main></main>
-    <footer></footer>
-</body>
+    <footer>
+      <script defer src="assets/js/index.js"></script>
+    </footer>
+  </body>
 </html>
