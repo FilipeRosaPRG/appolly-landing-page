@@ -5,12 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Appolly - Landing Page</title>
 
+    <style>
+      /* Header */
+      .header {
+        position: relative;
+        background-image: url(assets/images/background-image.png);
+        background-repeat: no-repeat;
+        padding-top: var(--margin-40);
+
+        & .header-container {
+          .logo-wrapper {
+            position: relative;
+
+            & .logo-container {
+              background-color: var(--white);
+              padding: var(--padding-32) var(--padding-16);
+              border-radius: var(--border-radius-5);
+              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+              & .logo-image {
+                display: block;
+                max-width: 100%;
+                height: auto;
+              }
+
+              @media (max-width: 768px) {
+                padding: var(--padding-24) var(--padding-8);
+
+                & .logo-image {
+                  width: 79px;
+                  height: 12px;
+                }
+              }
+            }
+          }
+          & .header-contacts {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: var(--margin-35);
+
+            & ul {
+              display: flex;
+              flex-direction: row;
+              gap: var(--gap-47);
+
+              & li {
+                display: flex;
+                align-items: center;
+                gap: var(--gap-18);
+
+                & a {
+                  color: var(--white);
+                  font-size: var(--font-size-12);
+                  line-height: var(--line-height-24);
+                  font-weight: var(--font-weight-400);
+                  font-family: Josefin Sans;
+                }
+              }
+            }
+
+            & .social-media-list {
+              gap: var(--gap-30);
+            }
+
+            @media (max-width: 620px) {
+              display: none;
+            }
+          }
+
+          & .header-mobile {
+            display: none;
+
+            @media (max-width: 768px) {
+              display: flex;
+              background-color: var(--white);
+              width: 100%;
+              padding: var(--padding-3);
+              justify-content: space-between;
+              align-items: center;
+              border-radius: var(--border-radius-5);
+              max-height: 40px;
+            }
+          }
+
+          & .header-nav {
+            & .header-menu {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              background-color: var(--white);
+              padding: var(--padding-5);
+              border-radius: var(--border-radius-5);
+              max-height: 60px;
+              margin-top: var(--margin-15);
+
+              @media (max-width: 768px) {
+                & li:nth-child(1) {
+                  margin-left: var(--margin-52);
+                }
+              }
+
+              @media (max-width: 768px) {
+                .logo-wrapper {
+                  display: none;
+                }
+                & li:nth-child(1) {
+                  width: 90%;
+                  display: flex;
+                  justify-content: flex-end;
+                  margin: var(--padding-24) 0 0 0;
+                }
+              }
+            }
+          }
+
+          & .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: var(--padding-8);
+          }
+
+          .menu-close {
+            background-color: transparent;
+            border: none;
+
+            @media (min-width: 768px) {
+              display: none;
+            }
+          }
+
+          @media (max-width: 768px) {
+            & .header-nav {
+              & .header-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: 0;
+                width: 100%;
+                background-color: var(--white);
+                padding: var(--padding-16) 0;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                max-height: fit-content;
+                align-items: flex-start;
+
+                &.active {
+                  display: flex;
+                }
+
+                & li {
+                  margin: var(--padding-24) 0 0 var(--padding-40);
+                  text-align: center;
+
+                  & .primary-button {
+                    display: none;
+                  }
+                }
+
+                & .logo-wrapper {
+                  display: none;
+                }
+              }
+            }
+
+            & .menu-toggle {
+              display: block;
+            }
+          }
+        }
+      }
+    </style>
     <!-- Styles -->
     <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
   <body>
     <img
-      src="assets/images/background-image.png"
+      src=""
       alt=""
       class="header-background-imagem"
     />
@@ -113,6 +289,12 @@
         <nav id="navigation" class="header-nav">
           <ul class="header-menu" role="menubar">
             <li role="none">
+              <button class="menu-close" aria-label="Fechar menu">
+                <img src="assets/images/close-icon.svg" alt="Fechar menu" />
+                <span class="sr-only">Fechar menu</span>
+              </button>
+            </li>
+            <li role="none">
               <a class="primary-link" href="#home" role="menuitem">HOME</a>
             </li>
             <li role="none">
@@ -147,6 +329,27 @@
             </li>
           </ul>
         </nav>
+      </div>
+
+      <div class="banner-text container">
+        <h1 class="banner-title">A Great App Makes Your Life Better</h1>
+        <p class="banner-description">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim velit mollit.
+        </p>
+        <a href="#" class="banner-text-link">Download App Now</a>
+        <div class="download-app-row">
+          <div class="download-app">
+            <a href="#">
+              <img src="assets/images/play-store.svg" alt="Google Play Badge" />
+            </a>
+          </div>
+          <div class="download-app">
+            <a href="#">
+              <img src="assets/images/app-store.svg" alt="App Store Badge" />
+            </a>
+          </div>
+        </div>
       </div>
     </header>
     <main></main>
